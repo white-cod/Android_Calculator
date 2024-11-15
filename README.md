@@ -2,5 +2,4 @@ Android 7.0+ calculator created by Kotlin and xml markup. So far it has basic ca
 
 Features, animations, as well as new calculation options along with different templates will be added in the future!
 
-
-![image](https://github.com/user-attachments/assets/35e37f80-f8f5-4d4d-a94b-383c4030a8e6)    ![CalculatorIcon](https://github.com/user-attachments/assets/1869a3c4-95ff-4784-a7db-c67c0378c7ca)
+![Без имени-1](https://github.com/user-attachments/assets/1035d985-fe40-4f84-aadd-bfafcb45cffe)  ![CalculatorIcon](https://github.com/user-attachments/assets/1869a3c4-95ff-4784-a7db-c67c0378c7ca)
