@@ -138,7 +138,6 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_minus"
             android:text="-"
-            android:textSize="30sp"
             style="@style/CalcButtonOperation"/>
 
         <com.google.android.material.button.MaterialButton
@@ -178,9 +177,79 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_equals"
-            android:textSize="35sp"
+            android:textSize="45sp"
             android:text="="
             style="@style/CalcButtonEquals" />
+    </GridLayout>
+
+
+    <GridLayout
+        android:id="@+id/scientificButtonContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:columnCount="3"
+        android:rowCount="5">
+
+        <com.google.android.material.button.MaterialButton
+            android:text="swp"
+            style="@style/CalcButtonScientific"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="Rad"
+            style="@style/CalcButtonScientific"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="sqrt"
+            style="@style/CalcButtonScientific"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="sin"
+            style="@style/CalcButtonScientific"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="cos"
+            style="@style/CalcButtonScientific"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="tan"
+            style="@style/CalcButtonScientific"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="ln"
+            style="@style/CalcButtonScientific"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="log"
+            style="@style/CalcButtonScientific"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="1/x"
+            style="@style/CalcButtonScientific"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="π"
+            style="@style/CalcButtonScientific"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="x^y"
+            style="@style/CalcButtonScientific"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="x²"
+            style="@style/CalcButtonScientific"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="|x|"
+            style="@style/CalcButtonScientific"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="π"
+            style="@style/CalcButtonScientific"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:text="e"
+            style="@style/CalcButtonScientific"/>
 
     </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

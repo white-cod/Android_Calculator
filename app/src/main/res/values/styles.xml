@@ -9,7 +9,30 @@
         <item name="cornerRadius">50dp</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:fontFamily">@font/calibri_light</item>
-        <item name="android:textSize">30sp</item>
+        <item name="android:lineHeight">90sp</item>
+        <item name="android:textSize">35sp</item>
+        <item name="backgroundTint">#181818</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="elevation">2dp</item>
+        <item name="android:stateListAnimator">@drawable/button_state_animator</item>
+        <item name="android:background">@drawable/round_button_ripple</item>
+    </style>
+
+    <style name="CalcButtonLand" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_gravity">fill</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="cornerRadius">50dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/calibri_light</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineHeight">20sp</item>
+        <item name="android:insetTop">2dp</item>
+        <item name="android:insetBottom">2dp</item>
         <item name="backgroundTint">#101010</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
@@ -17,6 +40,7 @@
         <item name="android:stateListAnimator">@drawable/button_state_animator</item>
         <item name="android:background">@drawable/round_button_ripple</item>
     </style>
+
 
     <style name="CalcButtonForEquals" parent="Widget.MaterialComponents.Button">
         <item name="android:layout_width">0dp</item>
@@ -28,7 +52,26 @@
         <item name="cornerRadius">50dp</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:fontFamily">@font/calibri</item>
-        <item name="android:textSize">30sp</item>
+
+        <item name="backgroundTint">#101010</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="elevation">2dp</item>
+        <item name="android:stateListAnimator">@drawable/button_state_animator</item>
+        <item name="android:background">@drawable/round_button_ripple_2</item>
+    </style>
+
+    <style name="CalcButtonForEqualsLand" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_gravity">fill</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="cornerRadius">50dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/calibri</item>
+        <item name="android:textSize">15sp</item>
         <item name="backgroundTint">#101010</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
@@ -40,9 +83,33 @@
     <style name="CalcButtonOperation" parent="CalcButton">
         <item name="backgroundTint">#2F2F2F</item>
         <item name="android:textColor">#58F86B</item>
+        <item name="android:lineHeight">200sp</item>
     </style>
 
     <style name="CalcButtonEquals" parent="CalcButtonForEquals">
         <item name="backgroundTint">#2B840C</item>
+        <item name="android:lineHeight">70sp</item>
+    </style>
+
+    <style name="CalcButtonOperationLand" parent="CalcButtonLand">
+        <item name="backgroundTint">#2F2F2F</item>
+        <item name="android:textColor">#58F86B</item>
+    </style>
+
+    <style name="CalcButtonEqualsLand" parent="CalcButtonForEqualsLand">
+        <item name="backgroundTint">#2B840C</item>
+    </style>
+
+    <style name="CalcButtonScientific" parent="CalcButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="backgroundTint">#2F2F2F</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 </resources>

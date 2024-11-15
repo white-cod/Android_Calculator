@@ -11,6 +11,15 @@ import android.widget.TextView
 import net.objecthunter.exp4j.ExpressionBuilder
 import android.util.Log
 import android.widget.GridLayout
+import kotlin.math.PI
+import kotlin.math.abs
+import kotlin.math.cos
+import kotlin.math.exp
+import kotlin.math.ln
+import kotlin.math.log10
+import kotlin.math.sin
+import kotlin.math.sqrt
+import kotlin.math.tan
 
 class MainActivity : ComponentActivity() {
     private lateinit var displayText: TextView
@@ -28,6 +37,16 @@ class MainActivity : ComponentActivity() {
         vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
         val buttonContainer = findViewById<GridLayout>(R.id.buttonContainer)
+        val scientificButtonContainer = findViewById<GridLayout>(R.id.scientificButtonContainer)
+
+        for (i in 0 until scientificButtonContainer.childCount) {
+            val button = scientificButtonContainer.getChildAt(i) as MaterialButton
+            button.setOnClickListener {
+                vibrateOnClick()
+                onScientificButtonClick(button.text.toString())
+            }
+        }
+
         for (i in 0 until buttonContainer.childCount) {
             val button = buttonContainer.getChildAt(i) as MaterialButton
 
@@ -46,6 +65,117 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+    private fun onScientificButtonClick(button: String) {
+        if (stateError) {
+            displayText.text = ""
+            stateError = false
+        }
+
+        val currentText = displayText.text.toString()
+        when (button) {
+            "sin" -> {
+                if (currentText.isNotEmpty() && lastNumeric) {
+                    displayText.append("×sin(")
+                    openParentheses++
+                } else {
+                    displayText.append("sin(")
+                    openParentheses++
+                }
+            }
+            "cos" -> {
+                if (currentText.isNotEmpty() && lastNumeric) {
+                    displayText.append("×cos(")
+                    openParentheses++
+                } else {
+                    displayText.append("cos(")
+                    openParentheses++
+                }
+            }
+            "tan" -> {
+                if (currentText.isNotEmpty() && lastNumeric) {
+                    displayText.append("×tan(")
+                    openParentheses++
+                } else {
+                    displayText.append("tan(")
+                    openParentheses++
+                }
+            }
+            "ln" -> {
+                if (currentText.isNotEmpty() && lastNumeric) {
+                    displayText.append("×ln(")
+                    openParentheses++
+                } else {
+                    displayText.append("ln(")
+                    openParentheses++
+                }
+            }
+            "log" -> {
+                if (currentText.isNotEmpty() && lastNumeric) {
+                    displayText.append("×log(")
+                    openParentheses++
+                } else {
+                    displayText.append("log(")
+                    openParentheses++
+                }
+            }
+            "1/x" -> {
+                if (currentText.isNotEmpty()) {
+                    val value = currentText.replace(",", ".").toDouble()
+                    val result = 1 / value
+                    displayText.text = result.toString().replace(".", ",")
+                } else {
+                    displayText.append("1/")
+                }
+            }
+            "e^x" -> {
+                if (currentText.isNotEmpty() && lastNumeric) {
+                    displayText.append("×e^")
+                } else {
+                    displayText.append("e^")
+                }
+            }
+            "x^y" -> {
+                if (currentText.isNotEmpty() && lastNumeric) {
+                    displayText.append("^")
+                } else {
+                    displayText.append("^")
+                }
+            }
+            "x²" -> {
+                if (currentText.isNotEmpty()) {
+                    val value = currentText.replace(",", ".").toDouble()
+                    val result = value * value
+                    displayText.text = result.toString().replace(".", ",")
+                } else {
+                    displayText.append("^2")
+                }
+            }
+            "|x|" -> {
+                if (currentText.isNotEmpty()) {
+                    val value = currentText.replace(",", ".").toDouble()
+                    val result = abs(value)
+                    displayText.text = result.toString().replace(".", ",")
+                } else {
+                    displayText.append("|")
+                }
+            }
+            "π" -> displayText.append(PI.toString().replace(".", ","))
+            "e" -> displayText.append(exp(1.0).toString().replace(".", ","))
+            "sqrt" -> {
+                if (currentText.isNotEmpty() && lastNumeric) {
+                    displayText.append("×sqrt(")
+                    openParentheses++
+                } else {
+                    displayText.append("sqrt(")
+                    openParentheses++
+                }
+            }
+        }
+        lastNumeric = false
+        lastDot = false
+    }
+
 
     private fun vibrateOnClick() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -168,6 +298,8 @@ class MainActivity : ComponentActivity() {
                 expression = expression.replace("×", "*")
                 expression = expression.replace("÷", "/")
                 expression = expression.replace(",", ".")
+
+                expression = expression.replace("ln(", "log(").replace(")", ")/log(e)")
 
                 Log.d("Calculator", "Evaluating expression: $expression")
 

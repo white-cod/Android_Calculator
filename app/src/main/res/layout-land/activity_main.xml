@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <TextView
+        android:id="@+id/displayText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="end|bottom"
+        android:padding="20dp"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:background="#000000"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#2F2F2F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/displayText" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider">
+
+        <GridLayout
+            android:id="@+id/scientificButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:columnCount="3"
+            android:rowCount="5">
+
+            <com.google.android.material.button.MaterialButton
+                android:text="swp"
+                style="@style/CalcButtonScientific"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="Rad"
+                style="@style/CalcButtonScientific"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="sqrt"
+                style="@style/CalcButtonScientific"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="sin"
+                style="@style/CalcButtonScientific"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="cos"
+                style="@style/CalcButtonScientific"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="tan"
+                style="@style/CalcButtonScientific"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="ln"
+                style="@style/CalcButtonScientific"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="log"
+                style="@style/CalcButtonScientific"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="1/x"
+                style="@style/CalcButtonScientific"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="e^x"
+                style="@style/CalcButtonScientific"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="x^y"
+                style="@style/CalcButtonScientific"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="x²"
+                style="@style/CalcButtonScientific"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="|x|"
+                style="@style/CalcButtonScientific"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="π"
+                style="@style/CalcButtonScientific"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="e"
+                style="@style/CalcButtonScientific"/>
+
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:columnCount="4"
+            android:rowCount="5">
+
+            <com.google.android.material.button.MaterialButton
+                android:text="C"
+                android:textColor="#F45E53"
+                style="@style/CalcButtonOperationLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="( )"
+                style="@style/CalcButtonOperationLand"
+                android:textColor="#58F86B"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="%"
+                style="@style/CalcButtonOperationLand"
+                android:textColor="#58F86B"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="÷"
+                style="@style/CalcButtonOperationLand"
+                android:textColor="#58F86B"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="7"
+                style="@style/CalcButtonLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="8"
+                style="@style/CalcButtonLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="9"
+                style="@style/CalcButtonLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="×"
+                style="@style/CalcButtonOperationLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="4"
+                style="@style/CalcButtonLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="5"
+                style="@style/CalcButtonLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="6"
+                style="@style/CalcButtonLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="-"
+                style="@style/CalcButtonOperationLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="1"
+                style="@style/CalcButtonLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="2"
+                style="@style/CalcButtonLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="3"
+                style="@style/CalcButtonLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="+"
+                style="@style/CalcButtonOperationLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="+/-"
+                style="@style/CalcButtonLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="0"
+                style="@style/CalcButtonLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text=","
+                style="@style/CalcButtonLand"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="="
+                style="@style/CalcButtonEquals"/>
+
+        </GridLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
