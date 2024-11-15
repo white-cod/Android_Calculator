@@ -1,4 +1,4 @@
-Android 7.0+ calculator created by Kotlin and xml markup. So far it has basic calculator functions. The design of the app follows the design of the standard Samsung phone app.
+Android 9.0+ calculator created by Kotlin and xml markup. So far it has basic calculator functions. The design of the app follows the design of the standard Samsung phone app.
 
 Features, animations, as well as new calculation options along with different templates will be added in the future!
 
